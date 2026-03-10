@@ -37,7 +37,9 @@ cp .env.example .env.local
 
 | Variable | Description |
 |----------|-------------|
-| `NEXT_PUBLIC_SITE_URL` | Production site URL (used for sitemap, Open Graph, canonical links). Default: `https://www.silverwatchsecurity.co.uk` |
+| `NEXT_PUBLIC_SITE_URL` | Production site URL (used for sitemap, Open Graph, canonical links). Default: `https://silver-watch-security.vercel.app` |
+
+> **Note:** All URLs use the `siteUrl` constant from `lib/seo.ts`. Set `NEXT_PUBLIC_SITE_URL` in `.env.local` to change the domain—no code changes needed.
 
 ### Development
 

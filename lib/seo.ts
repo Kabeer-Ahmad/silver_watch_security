@@ -1,5 +1,5 @@
 export const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.silverwatchsecurity.co.uk";
+  process.env.NEXT_PUBLIC_SITE_URL ?? "https://silver-watch-security.vercel.app";
 
 export const defaultKeywords = [
   "security services UK",
