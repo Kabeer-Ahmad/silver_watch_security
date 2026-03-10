@@ -1,36 +1,105 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Silver Watch Security LTD
+
+Professional website for **Silver Watch Security LTD** – a UK-based security services company offering manned guarding, mobile patrols, alarm response, key holding, and more.
+
+## Tech Stack
+
+- **Framework:** [Next.js 16](https://nextjs.org/) (App Router)
+- **UI:** [Tailwind CSS 4](https://tailwindcss.com/)
+- **Language:** TypeScript
+- **Fonts:** Geist (Google Fonts)
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- Node.js 18+
+- npm or pnpm
+
+### Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/your-username/silver-watch-security.git
+cd silver-watch-security
+
+# Install dependencies
+npm install
+```
+
+### Environment Variables
+
+Copy `.env.example` to `.env.local` and set your site URL for production:
+
+```bash
+cp .env.example .env.local
+```
+
+| Variable | Description |
+|----------|-------------|
+| `NEXT_PUBLIC_SITE_URL` | Production site URL (used for sitemap, Open Graph, canonical links). Default: `https://www.silverwatchsecurity.co.uk` |
+
+### Development
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Build
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm start
+```
 
-## Learn More
+### Lint
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm run lint
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Project Structure
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```
+├── app/
+│   ├── page.tsx              # Home
+│   ├── layout.tsx            # Root layout
+│   ├── sitemap.ts            # Dynamic sitemap
+│   ├── robots.ts             # robots.txt
+│   ├── about/                # About Us
+│   ├── book-now/             # Get a quote
+│   ├── clients/              # Our clients
+│   ├── reviews/              # Client reviews
+│   └── services/             # Services list + detail pages
+├── components/
+│   ├── Header.tsx
+│   ├── Footer.tsx
+│   ├── ReviewsSlider.tsx
+│   ├── SectorsBubbles.tsx
+│   ├── ExperienceCardsSlider.tsx
+│   └── icons.tsx
+├── lib/
+│   ├── services-data.ts      # Service content
+│   ├── reviews-data.ts       # Reviews
+│   └── seo.ts                # SEO helpers
+└── public/                   # Static assets (images, logos)
+```
 
-## Deploy on Vercel
+## Features
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Responsive design** – Mobile-first layout with Tailwind
+- **SEO** – Meta tags, Open Graph, Twitter Cards, sitemap, robots.txt
+- **Service pages** – 14 security services with images and detail pages
+- **Reviews** – Client testimonials with slider
+- **Contact** – WhatsApp, phone, email CTAs
+- **Client showcase** – Featured clients with ratings and partnership info
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Deployment
+
+The app can be deployed to [Vercel](https://vercel.com), Netlify, or any Node.js host. Set `NEXT_PUBLIC_SITE_URL` to your production domain before building.
+
+## License
+
+Private – Silver Watch Security LTD.
