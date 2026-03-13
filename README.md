@@ -71,6 +71,7 @@ npm run lint
 │   ├── sitemap.ts            # Dynamic sitemap
 │   ├── robots.ts             # robots.txt
 │   ├── about/                # About Us
+│   ├── cleaning/             # Redirect → /services/cleaning
 │   ├── book-now/             # Get a quote
 │   ├── clients/              # Our clients
 │   ├── reviews/              # Client reviews
@@ -83,6 +84,7 @@ npm run lint
 │   ├── ExperienceCardsSlider.tsx
 │   └── icons.tsx
 ├── lib/
+│   ├── company.ts            # Registered address & Companies House (single source)
 │   ├── services-data.ts      # Service content
 │   ├── reviews-data.ts       # Reviews
 │   └── seo.ts                # SEO helpers

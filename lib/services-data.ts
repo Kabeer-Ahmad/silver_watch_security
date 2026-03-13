@@ -121,6 +121,15 @@ export const services: ServiceItem[] = [
     highlights: ["Reception and access", "Corporate environment", "Out-of-hours cover", "Discreet and professional"],
     image: "/Security-Services-main-hero.jpg",
   },
+  {
+    slug: "cleaning",
+    name: "Cleaning Services",
+    shortDescription: "Offices, retail, end-of-tenancy and contract cleaning.",
+    description:
+      "We provide professional commercial and contract cleaning for businesses that want clear communication, reliable teams and consistent standards. Whether you need daily or weekly office cleaning, retail front-of-house and back-of-house cover, end-of-tenancy handover cleans or a fixed contract with agreed SLAs, we scope the work in writing and fit around your access and hours. Services typically include vacuuming, mopping, dusting, sanitising high-touch areas, kitchenettes and WCs, and waste removal as agreed—out-of-hours or daytime slots to suit your site.",
+    highlights: ["Office & workplace", "Commercial & retail", "End of tenancy & deep clean", "Contract schedules"],
+    image: "/Professional-cleaning-services.jpg",
+  },
 ];
 
 export function getServiceBySlug(slug: string): ServiceItem | undefined {

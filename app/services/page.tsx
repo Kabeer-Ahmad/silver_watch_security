@@ -7,7 +7,7 @@ import { absoluteUrl } from "@/lib/seo";
 export const metadata: Metadata = {
   title: "Services | Silver Watch Security LTD",
   description:
-    "Professional security services: security guards, mobile patrols, alarm response, key holding, concierge, empty property, events, CCTV, dog handling and more.",
+    "Professional security and cleaning: security guards, mobile patrols, alarm response, key holding, concierge, events, dog handling, retail, corporate, contract cleaning and more.",
   keywords: [
     "security guards UK",
     "mobile patrols",
@@ -37,7 +37,7 @@ export default function ServicesPage() {
             Our Services
           </h1>
           <p className="mt-4 max-w-2xl text-base font-medium text-[#2b2f48]/80 sm:text-lg md:text-xl">
-            From manned guarding and mobile patrols to alarm response and events—we offer a full range of professional security solutions tailored to your sector and budget.
+            From manned guarding and mobile patrols to alarm response, events and cleaning—we offer professional security and facilities support tailored to your sector and budget.
           </p>
         </div>
       </section>

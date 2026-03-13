@@ -66,3 +66,78 @@ html {
 .animate-float-delay-4 { animation-delay: 2s; }
 .animate-float-delay-5 { animation-delay: 2.5s; }
 .animate-float-delay-6 { animation-delay: 3s; }
+
+/* Hero & landing animations */
+@keyframes hero-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(1.25rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes hero-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes hero-scale-in {
+  from {
+    opacity: 0;
+    transform: scale(1.04);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-hero-title {
+  animation: hero-fade-up 0.75s ease-out both;
+}
+
+.animate-hero-text {
+  animation: hero-fade-up 0.75s ease-out 0.12s both;
+}
+
+.animate-hero-frame {
+  animation: hero-fade-up 0.85s ease-out 0.08s both;
+}
+
+.animate-hero-buttons {
+  animation: hero-fade-up 0.75s ease-out 0.28s both;
+}
+
+.animate-hero-image {
+  animation: hero-scale-in 1s ease-out 0.2s both;
+}
+
+.animate-section-in {
+  animation: hero-fade-up 0.7s ease-out both;
+}
+
+.animate-services-card {
+  animation: hero-fade-up 0.55s ease-out both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-float,
+  .animate-hero-title,
+  .animate-hero-text,
+  .animate-hero-frame,
+  .animate-hero-buttons,
+  .animate-hero-image,
+  .animate-section-in,
+  .animate-services-card {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}

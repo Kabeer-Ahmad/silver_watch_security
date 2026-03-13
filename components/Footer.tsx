@@ -1,6 +1,11 @@
 import Link from "next/link";
 import Image from "next/image";
 import { MailIcon, PhoneIcon, WhatsAppIcon } from "@/components/icons";
+import {
+  companiesHouseNumber,
+  companiesHouseUrl,
+  registeredAddressLines,
+} from "@/lib/company";
 
 const footerLinks = [
   { href: "/", label: "Home" },
@@ -51,6 +56,21 @@ export default function Footer() {
               </span>
             </div>
             <ul className="mt-5 space-y-4 sm:space-y-4">
+              <li className="flex gap-3 rounded-lg p-3 -m-3 sm:p-0 sm:py-1 sm:-m-0">
+                <span className="mt-0.5 shrink-0 text-[#336aa9]" aria-hidden>
+                  <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                </span>
+                <span className="text-base font-medium leading-relaxed text-[#2b2f48]/80">
+                  {registeredAddressLines.map((line) => (
+                    <span key={line} className="block">
+                      {line}
+                    </span>
+                  ))}
+                </span>
+              </li>
               <li>
                 <a
                   href="mailto:silverwatchsecurity@gmail.com"
@@ -114,8 +134,19 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 rounded-lg border border-[#2b2f48]/10 bg-white/40 py-4 text-center text-base font-medium text-[#2b2f48]/60">
+        <div className="mt-12 rounded-lg border border-[#2b2f48]/10 bg-white/40 px-4 py-4 text-center text-sm font-medium text-[#2b2f48]/60 sm:text-base">
           <p>© {new Date().getFullYear()} Silver Watch Security LTD. All rights reserved.</p>
+          <p className="mt-2">
+            Companies House:{" "}
+            <a
+              href={companiesHouseUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold text-[#336aa9] underline-offset-2 hover:text-[#2a5890] hover:underline"
+            >
+              {companiesHouseNumber}
+            </a>
+          </p>
         </div>
       </div>
     </footer>

@@ -2,6 +2,11 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { CheckIcon } from "@/components/icons";
 import { absoluteUrl } from "@/lib/seo";
+import {
+  companiesHouseNumber,
+  companiesHouseUrl,
+  registeredAddressLines,
+} from "@/lib/company";
 
 export const metadata: Metadata = {
   title: "About Us | Silver Watch Security LTD",
@@ -95,6 +100,46 @@ export default function AboutPage() {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="border-t border-[#2b2f48]/10 bg-[#f8fafc] py-10 sm:py-16">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl font-extrabold text-[#2b2f48] sm:text-3xl">
+            Registered office & company details
+          </h2>
+          <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:max-w-3xl">
+            <div className="rounded-2xl border-2 border-[#336aa9]/20 bg-white p-6 shadow-sm sm:p-8">
+              <h3 className="text-sm font-bold uppercase tracking-wider text-[#336aa9]">
+                Address
+              </h3>
+              <address className="mt-3 not-italic text-base font-medium leading-relaxed text-[#2b2f48]/90">
+                {registeredAddressLines.map((line) => (
+                  <span key={line} className="block">
+                    {line}
+                  </span>
+                ))}
+              </address>
+            </div>
+            <div className="rounded-2xl border-2 border-[#336aa9]/20 bg-white p-6 shadow-sm sm:p-8">
+              <h3 className="text-sm font-bold uppercase tracking-wider text-[#336aa9]">
+                Companies House
+              </h3>
+              <p className="mt-3 text-base font-medium text-[#2b2f48]/90">
+                Registered in Scotland
+              </p>
+              <p className="mt-2 text-lg font-bold text-[#2b2f48]">
+                <a
+                  href={companiesHouseUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#336aa9] underline-offset-2 hover:text-[#2a5890] hover:underline"
+                >
+                  {companiesHouseNumber}
+                </a>
+              </p>
+            </div>
           </div>
         </div>
       </section>
