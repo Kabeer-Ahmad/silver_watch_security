@@ -121,7 +121,7 @@ export default function Home() {
           </div>
           <div className="animate-hero-image relative aspect-[4/3] w-full min-w-0 shrink-0 overflow-hidden rounded-2xl shadow-2xl ring-1 ring-[#2b2f48]/10 lg:aspect-square lg:max-w-xl">
             <Image
-              src="/Security-Services-main-hero.jpg"
+              src="/Security-Services-guard_talking.png"
               alt="Silver Watch Security"
               fill
               className="object-cover transition-transform duration-700 ease-out hover:scale-[1.02]"
