@@ -226,6 +226,18 @@ export default function Home() {
               View All Services
             </Link>
           </div>
+          <div className="relative mt-12 w-full overflow-hidden rounded-2xl sm:mt-14">
+            <div className="relative aspect-[21/9] w-full min-h-[180px] sm:aspect-[3/1] sm:min-h-[220px]">
+              <Image
+                src="/multiple_guards_new.jpeg"
+                alt="Professional security team at Silver Watch Security"
+                fill
+                className="object-cover"
+                sizes="100vw"
+                priority={false}
+              />
+            </div>
+          </div>
         </div>
       </section>
 

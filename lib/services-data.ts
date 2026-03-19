@@ -87,7 +87,7 @@ export const services: ServiceItem[] = [
     shortDescription: "Crowd management and event stewarding.",
     description: "From corporate events and conferences to festivals and sports, we supply trained event security and stewards. We handle access control, crowd flow, VIP areas and incident response so your event runs safely and smoothly.",
     highlights: ["Corporate and public events", "Crowd management", "Access and VIP", "Pre-event planning"],
-    image: "/Event_security.jpg",
+    image: "/function_concert_new.jpeg",
   },
   {
     slug: "cctv-cscs",
@@ -103,7 +103,7 @@ export const services: ServiceItem[] = [
     shortDescription: "Professional K9 security teams.",
     description: "Our dog handling teams provide a strong deterrent and search capability for large sites, warehouses and high-risk premises. Handlers and dogs are trained and licensed to industry standards. K9 units can be deployed for patrols, search and response to incidents.",
     highlights: ["Licensed handlers and dogs", "Deterrent and search", "Large site coverage", "Incident response"],
-    image: "/Security-Services-guard_talking.png",
+    image: "/dog_new.jpeg",
   },
   {
     slug: "retail-security",
