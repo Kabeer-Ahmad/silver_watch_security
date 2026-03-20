@@ -31,7 +31,7 @@ export const services: ServiceItem[] = [
     shortDescription: "Visible presence and rapid response across multiple locations.",
     description: "Mobile patrols give you a visible security presence without the cost of a full-time guard. Our teams visit your sites on a schedule you choose—random or fixed—checking perimeters, outbuildings and alarms. We provide detailed reports and can respond to incidents or call-outs as part of the service.",
     highlights: ["Random or scheduled visits", "Detailed incident reports", "Multi-site coverage", "Cost-effective presence"],
-    image: "/property-inspections.webp",
+    image: "/mob_patrol.webp",
   },
   {
     slug: "alarm-response",
@@ -55,7 +55,7 @@ export const services: ServiceItem[] = [
     shortDescription: "Reception and front-of-house security.",
     description: "Our concierge and reception security staff combine access control with a welcoming front-of-house presence. They manage sign-in, visitor passes, deliveries and reception duties while maintaining security standards. Perfect for corporate offices, residential developments and premium buildings.",
     highlights: ["Reception and access control", "Visitor management", "Professional presentation", "Residential and corporate"],
-    image: "/Concierge-Security.jpg",
+    image: "/concierge-security-services-london-img1.jpg",
   },
   {
     slug: "empty-property",
@@ -63,7 +63,7 @@ export const services: ServiceItem[] = [
     shortDescription: "Protection for vacant buildings and sites.",
     description: "Vacant properties are at risk of trespass, vandalism and theft. We provide dedicated empty property security through regular patrols, alarm response and, where needed, static guards. Our solutions help you meet insurer requirements and protect assets until sale or reoccupation.",
     highlights: ["Vacant building protection", "Insurer compliance", "Patrols and response", "Flexible terms"],
-    image: "/Construction_Site_security.jpg",
+    image: "/empty_prop.webp",
   },
   {
     slug: "gatehouse-control",
