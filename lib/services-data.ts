@@ -6,6 +6,14 @@ export interface ServiceItem {
   highlights?: string[];
   image?: string;
   imagePlaceholder?: string;
+  /** Optional gallery images for services with extra visuals */
+  galleryImages?: string[];
+  /** Optional gallery section title (default: "Event gallery") */
+  galleryTitle?: string;
+  /** Optional gallery section description */
+  galleryDescription?: string;
+  /** Optional additional content sections */
+  additionalContent?: { title: string; body: string }[];
 }
 
 export const services: ServiceItem[] = [
@@ -39,7 +47,7 @@ export const services: ServiceItem[] = [
     shortDescription: "Secure key holding and access management.",
     description: "We hold your keys in secure, audited storage and provide access for contractors, emergency services or your team when needed. Key holding removes the burden from your staff and ensures only authorised access. Ideal for multi-site operations and out-of-hours requirements.",
     highlights: ["Secure storage", "Audited access", "Contractor handover", "Out-of-hours support"],
-    image: "/maintenance-and-repairs.webp",
+    image: "/key_holding.webp",
   },
   {
     slug: "concierge",
@@ -85,9 +93,29 @@ export const services: ServiceItem[] = [
     slug: "events",
     name: "Events Security",
     shortDescription: "Crowd management and event stewarding.",
-    description: "From corporate events and conferences to festivals and sports, we supply trained event security and stewards. We handle access control, crowd flow, VIP areas and incident response so your event runs safely and smoothly.",
+    description:
+      "From corporate events and conferences to festivals and sports, we supply trained event security and stewards. We handle access control, crowd flow, VIP areas and incident response so your event runs safely and smoothly. Our teams are experienced in managing large crowds, liaising with organisers and emergency services, and maintaining a visible, professional presence that keeps attendees safe and events running to plan.",
     highlights: ["Corporate and public events", "Crowd management", "Access and VIP", "Pre-event planning"],
     image: "/function_concert_new.jpeg",
+    galleryImages: [
+      "/Event_more/WhatsApp Image 2026-03-20 at 04.50.37.jpeg",
+      "/Event_more/WhatsApp Image 2026-03-20 at 04.50.37 (1).jpeg",
+      "/Event_more/WhatsApp Image 2026-03-20 at 04.50.37 (2).jpeg",
+      "/Event_more/WhatsApp Image 2026-03-20 at 04.50.37 (4).jpeg",
+      "/Event_more/WhatsApp Image 2026-03-20 at 04.50.38.jpeg",
+    ],
+    additionalContent: [
+      {
+        title: "Types of events we cover",
+        body:
+          "We provide event security for corporate conferences, product launches, AGMs and gala dinners; public events such as festivals, concerts, sports matches and outdoor gatherings; and private events including weddings, parties and community functions. Whether your event is indoors or outdoors, day or night, small or large-scale, we adapt our staffing and approach to the venue, audience and risk profile.",
+      },
+      {
+        title: "How we work",
+        body:
+          "We liaise with organisers, venue managers and licensing authorities in advance to agree staffing levels, entry points, search policy and emergency procedures. On the day, our teams manage queues, check tickets, patrol the site and respond to incidents. We provide SIA-licensed door supervisors where required and can work alongside your in-house team or take full responsibility for security. All our staff are trained in conflict resolution and first aid.",
+      },
+    ],
   },
   {
     slug: "cctv-cscs",
@@ -96,6 +124,9 @@ export const services: ServiceItem[] = [
     description: "We provide CCTV monitoring support and construction site security staff who hold CSCS cards where required. Our teams understand site safety and security, from static guarding to mobile patrols and alarm response on construction and industrial projects.",
     highlights: ["CCTV awareness", "CSCS where required", "Construction experience", "Site safety knowledge"],
     image: "/CCTV-Installation-Monitoring-1.png",
+    galleryImages: ["/cctv_new.jpeg"],
+    galleryTitle: "Live remote CCTV monitoring",
+    galleryDescription: "24/7 real-time monitoring to protect your business.",
   },
   {
     slug: "dog-handling",

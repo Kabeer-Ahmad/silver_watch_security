@@ -27,7 +27,7 @@ export const metadata: Metadata = {
       "Professional security guards, mobile patrols, alarm response. SIA-licensed, 24/7. Trusted across the UK.",
     url: absoluteUrl("/"),
     type: "website",
-    images: [{ url: absoluteUrl("/Security-Services-main-hero.jpg"), width: 1200, height: 630, alt: "Silver Watch Security" }],
+    images: [{ url: absoluteUrl("/evemt_group_new.jpeg"), width: 1200, height: 630, alt: "Silver Watch Security team" }],
   },
   alternates: { canonical: absoluteUrl("/") },
 };
@@ -121,10 +121,10 @@ export default function Home() {
           </div>
           <div className="animate-hero-image relative aspect-[4/3] w-full min-w-0 shrink-0 overflow-hidden rounded-2xl shadow-2xl ring-1 ring-[#2b2f48]/10 lg:aspect-square lg:max-w-xl">
             <Image
-              src="/Security-Services-guard_talking.png"
-              alt="Silver Watch Security"
+              src="/evemt_group_new.jpeg"
+              alt="Silver Watch Security professional team"
               fill
-              className="object-cover transition-transform duration-700 ease-out hover:scale-[1.02]"
+              className="object-cover object-center transition-transform duration-700 ease-out hover:scale-[1.02]"
               priority
               sizes="(max-width: 1024px) 100vw, 512px"
             />

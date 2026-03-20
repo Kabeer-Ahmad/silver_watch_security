@@ -85,6 +85,16 @@ export default async function ServicePage({ params }: Props) {
               <div className="mt-6 sm:mt-8">
                 <p className="text-base font-medium leading-relaxed text-[#2b2f48]/80 sm:text-lg md:text-xl">{service.description}</p>
               </div>
+              {service.additionalContent && service.additionalContent.length > 0 && (
+                <div className="mt-10 space-y-8">
+                  {service.additionalContent.map((section) => (
+                    <div key={section.title}>
+                      <h2 className="text-xl font-bold text-[#2b2f48] sm:text-2xl">{section.title}</h2>
+                      <p className="mt-3 text-base font-medium leading-relaxed text-[#2b2f48]/80 sm:text-lg">{section.body}</p>
+                    </div>
+                  ))}
+                </div>
+              )}
             </div>
             <div>
               {service.highlights && service.highlights.length > 0 && (
@@ -119,6 +129,50 @@ export default async function ServicePage({ params }: Props) {
               </div>
             </div>
           </div>
+
+          {service.galleryImages && service.galleryImages.length > 0 && (() => {
+            const galleryImages = service.galleryImages;
+            const isSingle = galleryImages.length === 1;
+            return (
+            <section className="mt-16 border-t border-[#2b2f48]/10 pt-16">
+              <h2 className="text-2xl font-extrabold text-[#2b2f48] sm:text-3xl">
+                {service.galleryTitle ?? "Event gallery"}
+              </h2>
+              <p className="mt-3 text-base font-medium text-[#2b2f48]/70 sm:text-lg">
+                {service.galleryDescription ?? "Our teams in action at events across the UK."}
+              </p>
+              <div
+                className={
+                  isSingle
+                    ? "mt-8 flex justify-center"
+                    : "mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3"
+                }
+              >
+                {galleryImages.map((src, i) => (
+                  <div
+                    key={i}
+                    className={
+                      isSingle
+                        ? "w-full max-w-2xl overflow-hidden rounded-xl border border-[#2b2f48]/10 bg-[#f8fafc] p-4"
+                        : "flex min-h-[140px] items-center justify-center overflow-hidden rounded-xl border border-[#2b2f48]/10 bg-[#f8fafc] p-4"
+                    }
+                  >
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src={encodeURI(src)}
+                      alt={`${service.name} - ${service.galleryTitle ?? "image"} ${i + 1}`}
+                      className={
+                        isSingle
+                          ? "mx-auto block max-h-[700px] w-full max-w-full object-contain"
+                          : "max-h-[420px] max-w-full object-contain"
+                      }
+                    />
+                  </div>
+                ))}
+              </div>
+            </section>
+            );
+          })()}
         </div>
       </section>
     </div>
