@@ -167,8 +167,8 @@ export default function Home() {
             </Link>
             <div className="relative aspect-video w-full max-w-[280px] overflow-hidden rounded-2xl shadow-xl sm:max-w-xs">
               <Image
-                src="/Secuirty_Guards.jpg"
-                alt="Professional security guards"
+                src="/Security-Services-guard_talking.png"
+                alt="Professional security guard"
                 fill
                 className="object-cover"
                 sizes="(max-width: 640px) 100vw, 320px"
